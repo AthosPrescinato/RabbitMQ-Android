@@ -11,7 +11,7 @@ Download or Clone the repository, and open it in Android Studio!
 
 Just tapping a text in EditText and click on button "Publish Message", the message will be send to RabbitMQ and cameback showing in "TextView". All steps is showing in Logcat.
 
-##ScreenShots
+## ScreenShots
 
 ![Screenshot1](https://github.com/AthosPrescinato/RabbitMQ-Send-and-Receive-Android/blob/main/images%20read/1.png)
 ![Screenshot2](https://github.com/AthosPrescinato/RabbitMQ-Send-and-Receive-Android/blob/main/images%20read/2.png)
