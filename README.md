@@ -9,7 +9,7 @@ Download or Clone the repository, and open it in Android Studio!
 
 # How its works?
 
-Just tapping a text in EditText and click on button "Publish Message", the message will be send to RabbitMQ and cameback showing in "TextView". All steps is showing in Logcat.
+Just write a text in EditText and click on the "Publish Message" button, the message will be sent to RabbitMQ and will be displayed in "TextView". All steps are displayed in Logcat.
 
 ## ScreenShots
 
