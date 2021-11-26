@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final static String QUEUE_NAME = "teste";
+    private final static String QUEUE_NAME = ""; // Put QUEUE Name here || Insira o nome da fila aqui
     Button publish, receive;
     EditText editText;
     TextView textView;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                rabbitConnection = RabbitMQConnection.getInstance(""); // Put QUEUE Name here || Insira o nome da fila aqui
+                rabbitConnection = RabbitMQConnection.getInstance(QUEUE_NAME);
                 rabbitConnection.setActionListener(new RabbitMQConnection.ActionListenerCallback() {
                     @Override
                     public void onMessage(String successMessage, Object consumerTag) {

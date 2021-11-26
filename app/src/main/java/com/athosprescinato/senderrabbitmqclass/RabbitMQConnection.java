@@ -30,10 +30,11 @@ public class RabbitMQConnection {
     }
 
 
-    public RabbitMQConnection(String LockerID) {
+    public RabbitMQConnection(String queueName) {
         try {
-            connection = getConnection(LockerID);
+            connection = getConnection(queueName);
             channel = connection.createChannel();
+            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
             channel.exchangeDeclare(EXCHANGE_NAME, "direct");
             Log.i("[x] ", "Create Connection and Channel"); // Search in "logcat"
             receive();
@@ -49,10 +50,10 @@ public class RabbitMQConnection {
         return instance;
     }
 
-    private static Connection getConnection(String LockerID) throws Exception {
+    private static Connection getConnection(String queueName) throws Exception {
 //        if (connection == null) {
 
-            QUEUE_NAME = LockerID;
+            QUEUE_NAME = queueName;
 
             ConnectionFactory factory = new ConnectionFactory();
 
